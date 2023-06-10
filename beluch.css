@@ -1,0 +1,711 @@
+:root{
+    --first_color: #66A59E;
+    --snd_color: #F12D70;
+    --third_color: #A2865E;
+    --section_odd: #F7F7F7;
+    --section_even: #E5E5E5;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    font-size: 1.5rem;
+    line-height: 1.5; 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 0.02em;
+}
+.links{
+    padding: 1em;
+    display: flex;
+    justify-content: space-around;
+    text-transform: uppercase;
+    background: var(--first_color);
+    font-size: 1rem;
+}
+.links a{
+    color: #fff;
+    text-decoration: none;
+}
+.links a:hover{
+    border-bottom: 1px solid #fff;
+}
+.hero, .hero_content, .hero_contact_link, #contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hero{
+    padding: 3em;
+    background-image: linear-gradient(
+        rgba(181, 112, 112, 0.6), 
+        rgba(112, 122, 181, 0.6)
+    ),url(img/osteo_baby.jpg);
+    background-size: cover;
+    color: #fff;
+}
+.hero h1{
+    text-align: center;
+}
+.hero_contact_link a{
+    background: var(--snd_color);
+    padding: 15px 20px 15px 20px;
+    color: #fff;
+    border-radius: 2em;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 1em;
+}
+.hero_contact_link a:hover{
+    box-shadow: 0px 1px 11px 5px #cac1c1;
+    letter-spacing: 1.5px;
+}
+section{
+    padding: 2em;
+}
+/* MAIN SECTION */
+section
+#about_osteo, #about_me{
+    background: var(--section_even);
+}
+#prices, #contact{
+    background: var(--section_odd);
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*ABOUT SECTION */
+.about_osteo-title, .about_osteo-action, .contact_title{
+    color: var(--third_color);
+    padding: 1em 0;
+}
+ul{
+    padding-left: 3em;
+}
+ul li{
+    list-style: none;
+}
+ul li::before{
+    content: "\2022";
+    color: var(--snd_color);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -0.82em;
+}
+/* PRICES SECTION*/
+.tarifs{
+    margin-right: 1em;
+}
+.mutuelle{
+    margin-left: 1em;
+}
+.left_card{
+    height: 100%;
+    border: 1px solid #f1f1f1;
+    background-color: aliceblue;
+    padding: 0.5em;
+}
+.euro{
+    padding: .7em 0;
+    font-size: 2rem;
+    color: var(--third_color);
+}
+.right_card{
+    background-color: aliceblue;
+    padding: 1em;
+}
+/*ABOUT ME SECTION*/
+#about_me{
+    display: flex;
+    justify-content: space-evenly;
+}
+#about_me div, aside{
+    display: flex;
+    align-self: center;
+}
+img{
+    border: 7px solid var(--first_color);
+    padding: 5px;
+    background-clip: content-box;
+    transition: all .5s;
+    width: 550px;
+    height: 400px;
+}
+img:hover{
+    transform: scale(1.019);
+}
+
+video{
+    border: 6px solid var(--first_color);
+    padding: 5px;
+    width: 550px;
+    height: 400px;
+}
+/*CONTACT SECTION*/
+#contact{
+    background: url(img/flou-luxe-abstrait-degrade-couleur-gris-utilise-comme-mur-studio-arriere-plan-pour-afficher-vos-produits.jpg);
+}
+.wrap_formMap{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.wrap_formMap h3{
+    margin-bottom: 1em;
+}
+/* .map{
+    display: flex;
+} */
+.form, .map{
+    display: flex;
+    flex-direction: column;
+}
+input{
+    padding: .7em;
+    margin: 1em 0;
+}
+.btn{
+    margin-top: 1em;
+    color: #fff;
+    font-weight: bold;
+    background: var(--snd_color);
+    padding: 10px 50px 10px 50px;
+    border: none;
+}
+.btn:hover{
+    color: var(--snd_color);
+    background-color: #fff;
+    box-shadow: 2px 3px 10px 2px #000;
+    
+}
+/*FOOTER*/
+.footer_section{
+    padding: 1em;
+    background-color: var(--section_even);
+}
+.footer_links{
+    padding: 5px;
+}
+footer p{
+    text-align: center;
+}
+/*************************************************************************
+
+                                MEDIA QUERIES
+
+*************************************************************************/
+
+@media screen and (max-width: 600px){
+    /* body{
+        background: pink;
+    } */
+    .container, .links a{
+        font-size: .8rem; 
+    }
+    .links{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero{
+        padding: 0.3em;
+        height: 80vh;
+        background-position-x: -16em;
+    }
+    .hero_content p{
+        text-align: center;
+        width: 18em;
+    }
+    .hero_contact_link a{
+        font-size: 17px;
+        letter-spacing: 0.8px;
+        box-shadow: 0px 1px 3px 0px #cac1c1;
+        background-color: transparent;
+        color: var(--snd_color);
+    }
+    .hero_contact_link a:active{
+        background-color: var(--snd_color);
+        color: #fff;
+    }
+    /* SECTION ABOUT OSTEO */
+    #about_osteo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .osteoGeneral_wrapper{
+        display: inline-block;
+        margin-bottom: 1em;
+        border-radius: 0px 72px 0px 40px;
+        padding: 0.5em;
+        background-color: #e3dcde;
+        border-radius: 72px 0 72px 0px;
+        width: 100%;
+        box-shadow: 1px 1px 7px 4px #aea6adcc;
+    }
+    .osteo_general{
+        background: var(--section_odd);
+        padding: 1em;
+        border-radius: 0px 72px 0px 40px;
+    }
+    .osteoIs_wrapper{
+        display: inline-block;
+        margin-top: 1em;
+        border-radius: 0px 72px 0px 40px;
+        padding: 0.5em;
+        background-color: var(--section_odd);
+        border-radius: 72px 0 72px 0px;
+        width: 100%;
+        box-shadow: 1px 1px 7px 4px #aea6adcc;
+    }
+    .osteo_is{
+        background: #e3dcde;
+        padding: 1em;
+        border-radius: 0px 72px 0px 40px;
+    }
+    .aboutAction_wrap{
+        background-color: var(--section_even);
+        padding: 1em;
+        position: relative;
+        border-bottom-right-radius: 197px;
+    }
+    .aboutAction_wrap::before{
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: var(--first_color);
+        top: 13px;
+        right: 109px;
+        opacity: 0.3;
+        border-radius: 50%;
+    }
+    .aboutAction_wrap::after{
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: #F12D70;
+        right: 5px;
+        bottom: 3px;
+    }
+    ul{
+        background-color: #c7c5c5;
+        padding: 1.3em;
+        border-radius: 17px 177px 0px 52px;
+        margin: 1em;
+    }
+    /* Prices Section */
+    #prices{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+    }
+    .tarifs{
+        background: var(--third_color);
+        padding: 1em;
+        margin-right: 0px;
+        margin-bottom: 2em;
+    }
+    .mutuelle{
+        background: var(--section_even);
+        padding: 1em;
+        margin-left: 0px;
+    }
+    .left_card{
+        border-top-left-radius: 100px;
+    }
+    .right_card{
+        border-bottom-right-radius: 100px;
+    }
+    /* SECTION ABOUT ME*/
+    #about_me{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    img{
+        width: 250px;
+        height: 250px;
+        margin-bottom: 1em;
+    }
+    video{
+        width: 250px;
+        height : 400px; 
+    }
+    /* SECTION CONTACT */
+
+    .wrap_formMap{
+        flex-direction: column;
+        max-width: 400px;
+    }
+    form{
+        margin-bottom: 2em;
+    }
+    iframe{
+        width: 250px;
+        margin: 0 auto;
+        width: 90%;
+    }
+    /* SECTION FOOTER  */
+    footer p{
+        padding: 0em;
+        font-size: .5rem;
+    }
+}
+
+@media screen and (min-width: 377px) and (max-width: 600px){
+    
+    .osteoGeneral_wrapper, .osteoIs_wrapper{
+        text-align: center;
+        max-width: 25em;
+    }
+    .aboutAction_wrap, .tarifs, .mutuelle{
+        max-width: 25em;
+    }
+   
+    /* SECTION FOOTER  377px => 600px*/
+    footer p{
+        padding: 0em;
+        font-size: .6rem;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 768px) {
+    .container, .links a{
+        font-size: 1rem;
+    }
+    /*HERO PART 601px => 768px */
+    .hero{
+        height: 100vh;
+        background-position-x: -12em;
+    }
+    .hero_contact_link a{
+        font-size: 17px;
+        letter-spacing: 0.8px;
+        box-shadow: 0px 1px 3px 0px #cac1c1;
+        background-color: transparent;
+        color: var(--snd_color);
+    }
+    .hero_contact_link a:active{
+        background-color: var(--snd_color);
+        color: #fff;
+    }
+     /* SECTION ABOUT OSTEO 601px => 768px */
+     #about_osteo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .osteoGeneral_wrapper, .osteoIs_wrapper{
+        text-align: center;
+        max-width: 25em;
+    }
+    .aboutAction_wrap, .tarifs, .mutuelle{
+        max-width: 25em;
+    }
+    .osteoGeneral_wrapper{
+        display: inline-block;
+        margin-bottom: 1em;
+        border-radius: 0px 72px 0px 40px;
+        padding: 0.5em;
+        background-color: #e3dcde;
+        border-radius: 72px 0 72px 0px;
+        width: 100%;
+        box-shadow: 1px 1px 7px 4px #aea6adcc;
+    }
+    .osteo_general{
+        background: var(--section_odd);
+        padding: 1em;
+        border-radius: 0px 72px 0px 40px;
+    }
+    .osteoIs_wrapper{
+        display: inline-block;
+        margin-top: 1em;
+        border-radius: 0px 72px 0px 40px;
+        padding: 0.5em;
+        background-color: var(--section_odd);
+        border-radius: 72px 0 72px 0px;
+        width: 100%;
+        box-shadow: 1px 1px 7px 4px #aea6adcc;
+    }
+    .osteo_is{
+        background: #e3dcde;
+        padding: 1em;
+        border-radius: 0px 72px 0px 40px;
+    }
+    .aboutAction_wrap{
+        background-color: var(--section_even);
+        padding: 1em;
+        position: relative;
+        border-bottom-right-radius: 197px;
+    }
+    .aboutAction_wrap::before{
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: var(--first_color);
+        top: 13px;
+        right: 109px;
+        opacity: 0.3;
+        border-radius: 50%;
+    }
+    .aboutAction_wrap::after{
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: #F12D70;
+        right: 5px;
+        bottom: 3px;
+    }
+    ul{
+        background-color: #c7c5c5;
+        padding: 1.3em;
+        border-radius: 17px 177px 0px 52px;
+        margin: 1em;
+    }
+     /* SECTION ABOUT ME 601px => 768px */
+    #about_me{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    img{
+        width: 350px;
+        height: 250px;
+        margin-bottom: 1em;
+    }
+    video{
+        width: 350px;
+        height : 400px; 
+    }
+    /* SECTION PRICES 601px => 768px*/
+    #prices{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+    }
+    .tarifs, .mutuelle{
+        width: 50%;
+        padding: 0.5em;
+        margin: 0;
+    }
+    .tarifs{
+        background: var(--third_color);
+        padding: 1em;
+        margin-right: 20px;
+        margin-bottom: 2em;
+    }
+    .mutuelle{
+        background: var(--section_even);
+        padding: 1em;
+        margin-left: 20px;
+    }
+    .left_card, .right_card{
+        padding: 0;
+    }
+    .left_card{
+        border-top-left-radius: 100px;
+    }
+    .right_card{
+        border-bottom-right-radius: 100px;
+        padding: 25px;
+    }
+    /* SECTION CONTACT 601px => 768px*/
+    .wrap_formMap{
+        flex-direction: column;
+        max-width: 400px;
+    }
+    iframe{
+        width: 250px;
+        margin: 0 auto;
+        width: 90%;
+    }
+     /* SECTION FOOTER 601px => 768px*/
+     footer p{
+        padding: 0em;
+        font-size: .7rem;
+    }
+}
+
+@media screen and (min-width: 769px){
+    .container, .links a{
+        font-size: 1rem;
+    }
+    /*HERO PART 769px => px */
+    .hero{
+        height: 100vh;
+    }
+    .hero_contact_link a{
+        font-size: 17px;
+        letter-spacing: 0.8px;
+        box-shadow: 0px 1px 3px 0px #cac1c1;
+        background-color: transparent;
+        color: var(--snd_color);
+    }
+    .hero_contact_link a:active{
+        background-color: var(--snd_color);
+        color: #fff;
+    }
+     /* SECTION ABOUT OSTEO 769px => px */
+     #about_osteo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .osteoGeneral_wrapper, .osteoIs_wrapper{
+        text-align: center;
+        max-width: 25em;
+    }
+    .aboutAction_wrap, .tarifs, .mutuelle{
+        max-width: 25em;
+    }
+    .osteoGeneral_wrapper{
+        display: inline-block;
+        margin-bottom: 1em;
+        border-radius: 0px 72px 0px 40px;
+        padding: 0.5em;
+        background-color: #e3dcde;
+        border-radius: 72px 0 72px 0px;
+        width: 100%;
+        box-shadow: 1px 1px 7px 4px #aea6adcc;
+    }
+    .osteo_general{
+        background: var(--section_odd);
+        padding: 1em;
+        border-radius: 0px 72px 0px 40px;
+    }
+    .osteoIs_wrapper{
+        display: inline-block;
+        margin-top: 1em;
+        border-radius: 0px 72px 0px 40px;
+        padding: 0.5em;
+        background-color: var(--section_odd);
+        border-radius: 72px 0 72px 0px;
+        width: 100%;
+        box-shadow: 1px 1px 7px 4px #aea6adcc;
+    }
+    .osteo_is{
+        background: #e3dcde;
+        padding: 1em;
+        border-radius: 0px 72px 0px 40px;
+    }
+    .aboutAction_wrap{
+        background-color: var(--section_even);
+        padding: 1em;
+        position: relative;
+        border-bottom-right-radius: 197px;
+    }
+    .aboutAction_wrap::before{
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: var(--first_color);
+        top: 13px;
+        right: 109px;
+        opacity: 0.3;
+        border-radius: 50%;
+    }
+    .aboutAction_wrap::after{
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: #F12D70;
+        right: 5px;
+        bottom: 3px;
+    }
+    ul{
+        background-color: #c7c5c5;
+        padding: 1.3em;
+        border-radius: 17px 177px 0px 52px;
+        margin: 1em;
+    }
+     /* SECTION ABOUT ME 769px => px */
+    #about_me{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #about_me div{
+        padding-right: 10px;
+    }
+    aside{
+        padding-left: 10px;
+    }
+    img{
+        width: 350px;
+        height: 250px;
+        margin-bottom: 1em;
+    }
+    video{
+        width: 350px;
+        height : 400px; 
+    }
+    /* SECTION PRICES 769px => px*/
+    #prices{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+    }
+    .tarifs, .mutuelle{
+        width: 50%;
+        padding: 0.5em;
+        margin: 0;
+    }
+    .tarifs{
+        background: var(--third_color);
+        padding: 1em;
+        margin-right: 20px;
+        margin-bottom: 2em;
+    }
+    .mutuelle{
+        background: var(--section_even);
+        padding: 1em;
+        margin-left: 20px;
+    }
+    .left_card, .right_card{
+        padding: 0;
+    }
+    .left_card{
+        border-top-left-radius: 100px;
+    }
+    .right_card{
+        border-bottom-right-radius: 100px;
+        padding: 25px;
+    }
+    /* SECTION CONTACT 769px => px*/
+    /* .wrap_formMap{
+        flex-direction: column;
+        max-width: 400px;
+    } */
+    iframe{
+        width: 250px;
+        margin: 0 auto;
+        width: 90%;
+    }
+     /* SECTION FOOTER 769px => px*/
+     footer p{
+        padding: 0em;
+        font-size: 1rem;
+    }
+}
